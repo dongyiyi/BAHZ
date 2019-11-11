@@ -10,6 +10,10 @@ library(rstan)
 options(mc.cores = parallel::detectCores())
 library(tidyverse)
 library(loo)
+
+
+library(pkgdown)
+build_site()
 # Getting the minimal pre-compiled model to run -------------------
 # Generate a dataset
 data <- sim_geno_cline(transect_distances = seq(0,500,20), n_ind = 30, Fis = 0,
